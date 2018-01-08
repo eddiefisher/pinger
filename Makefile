@@ -33,7 +33,12 @@ runc: container
 # Build the project
 build:
 	cd ./src ; go build ${LDFLAGS} -o ../bin/${APP}
-	sh -c ./bin/${APP}
+
+bin1:
+	sh -c "./bin/${APP} -name=m1"
+
+bin2:
+	sh -c "./bin/${APP} -name=m2"
 
 # Run the project
 run:
